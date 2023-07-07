@@ -16,7 +16,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         Button btnWelcome = findViewById(R.id.btn_welcome);
         btnWelcome.setOnClickListener(view -> {
-            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            Intent intent = new Intent(view.getContext(), LoginActivity.class);
             startActivity(intent);
         });
     }
