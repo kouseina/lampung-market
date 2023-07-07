@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <ScrollView
         android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="left"
             android:paddingHorizontal="20dp">
@@ -23,7 +27,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Masuk"
+                android:text="Register"
                 android:fontFamily="@font/playfairdisplay_semibold"
                 android:textSize="24sp"
                 android:textColor="@color/black_900" />
@@ -32,18 +36,43 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:layout_marginTop="6dp"
-                android:text="Masuk Akun LampungMarket"
-                android:fontFamily="@font/sfprodisplay_regular"
+                android:layout_marginTop="4dp"
+                android:text="Register account Batours"
                 android:textColor="@color/black_800"
+                android:fontFamily="@font/sfprodisplay_regular"
                 android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginTop="30dp"
+                android:text="Nama Lengkap"
+                android:textColor="#636366"
+                android:fontFamily="@font/sfprodisplay_medium"
+                android:textAlignment="textStart"/>
+
+            <EditText
+                android:layout_marginTop="7dp"
+                android:id="@+id/et_fullName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Masukan Nama Lengkap"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="14sp"
+                android:padding="16dp"
+                android:textColor="#636366"
+                android:textColorHint="#A7A7A7"
+                android:lines="1"
+                android:background="@drawable/primary_edit_text"/>
 
             <TextView
                 android:inputType="textEmailAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:text="Email"
                 android:textColor="#636366"
                 android:fontFamily="@font/sfprodisplay_medium"
@@ -52,11 +81,36 @@
             <EditText
                 android:layout_marginTop="7dp"
                 android:id="@+id/et_email"
-                android:inputType="textEmailAddress"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:hint="Contoh: your_email@gmail.com"
+                android:hint="Contoh: email@gmail.com"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="14sp"
+                android:padding="16dp"
+                android:textColor="#636366"
+                android:textColorHint="#A7A7A7"
+                android:lines="1"
+                android:background="@drawable/primary_edit_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginTop="15dp"
+                android:text="No HP"
+                android:textColor="#636366"
+                android:fontFamily="@font/sfprodisplay_medium"
+                android:textAlignment="textStart"/>
+
+            <EditText
+                android:inputType="phone"
+                android:layout_marginTop="7dp"
+                android:id="@+id/et_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Masukan No HP"
                 android:fontFamily="@font/sfprodisplay_regular"
                 android:textSize="14sp"
                 android:padding="16dp"
@@ -82,7 +136,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:hint="Masukan Password"
+                android:hint="Enter your password"
                 android:fontFamily="@font/sfprodisplay_regular"
                 android:textSize="14sp"
                 android:padding="16dp"
@@ -100,17 +154,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
-                    android:text="Belum punya akun? "
+                    android:text="Sudah Punya Akun? "
                     android:textColor="#484848"
                     android:fontFamily="@font/sfprodisplay_regular"
                     android:textAlignment="textStart"/>
 
                 <TextView
-                    android:id="@+id/tv_register"
+                    android:id="@+id/tv_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sfprodisplay_medium"
-                    android:text="Register"
+                    android:text="Masuk"
                     android:textSize="12sp"
                     android:textColor="#484848"
                     android:clickable="true"/>
@@ -119,10 +173,10 @@
 
             <Button
                 android:layout_marginTop="50dp"
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MASUK"
+                android:text="REGISTER"
                 android:textAllCaps="false"
                 android:fontFamily="@font/sfprodisplay_bold"
                 android:textColor="@color/white"

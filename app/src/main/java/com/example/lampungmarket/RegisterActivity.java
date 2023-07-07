@@ -8,24 +8,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
-        TextView tvRegister = findViewById(R.id.tv_register);
-        Button btnLogin = findViewById(R.id.btn_login);
-        EditText editTextEmail = findViewById(R.id.et_email);
-        EditText editTextPassword = findViewById(R.id.et_password);
+        TextView tvLogin = findViewById(R.id.tv_login);
+        Button btnRegister = findViewById(R.id.btn_register);
 
-        tvRegister.setOnClickListener(view -> {
-            Intent intent = new Intent(this,RegisterActivity.class);
+        tvLogin.setOnClickListener(view -> {
+            Intent intent = new Intent(this,LoginActivity.class);
             startActivity(intent);
         });
 
-        btnLogin.setOnClickListener(view -> {
+        btnRegister.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
