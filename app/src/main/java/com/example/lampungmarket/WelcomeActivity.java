@@ -7,7 +7,20 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toolbar;
 
+import com.example.lampungmarket.storage.SharedPrefManager;
+
 public class WelcomeActivity extends AppCompatActivity {
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(SharedPrefManager.getLoggedInStatus(getApplicationContext())){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+            startActivity(intent);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

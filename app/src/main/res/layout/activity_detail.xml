@@ -50,7 +50,7 @@
                 android:textColor="@color/black_800" />
 
             <ImageView
-                android:id="@+id/img"
+                android:id="@+id/iv_thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="20dp"
@@ -76,7 +76,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Address"
+                    android:text="Alamat"
                     android:layout_marginTop="14dp"
                     android:fontFamily="@font/sfprodisplay_medium"
                     android:textSize="14sp"
@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price"
+                    android:text="Harga"
                     android:layout_marginTop="14dp"
                     android:fontFamily="@font/sfprodisplay_medium"
                     android:textSize="14sp"

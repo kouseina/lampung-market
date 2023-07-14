@@ -52,15 +52,19 @@ public class BannerSVAdapter extends SliderViewAdapter<BannerSVAdapter.SliderAda
     public void onBindViewHolder(SliderAdapterVH viewHolder, int position) {
         BannerItem sliderItem = mSliderItems.get(position);
 
-        Glide.with(viewHolder.itemView)
-                .load(sliderItem.image_url)
-                .fitCenter()
-                .into(viewHolder.imageViewBackground);
+//        Glide.with(viewHolder.itemView)
+//                .load(sliderItem.image_url)
+//                .fitCenter()
+//                .into(viewHolder.imageViewBackground);
+
+        viewHolder.imageViewBackground.setImageResource(sliderItem.image);
+        viewHolder.tvTitle.setText(sliderItem.title);
+        viewHolder.tvDesc.setText(sliderItem.desc);
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -73,10 +77,14 @@ public class BannerSVAdapter extends SliderViewAdapter<BannerSVAdapter.SliderAda
     public class SliderAdapterVH extends ViewHolder {
         View itemView;
         ImageView imageViewBackground;
+        TextView tvTitle;
+        TextView tvDesc;
 
         public SliderAdapterVH(View itemView) {
             super(itemView);
             imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
+            tvTitle = itemView.findViewById(R.id.tv_title);
+            tvDesc = itemView.findViewById(R.id.tv_desc);
             this.itemView = itemView;
         }
     }

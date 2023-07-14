@@ -1,12 +1,12 @@
 package com.example.lampungmarket.models;
 
 public class BannerItem {
-    public String image_url;
+    public Integer image;
     public String title;
     public String desc;
 
-    public BannerItem(String image_url, String title, String desc) {
-        this.image_url = image_url;
+    public BannerItem(Integer image, String title, String desc) {
+        this.image = image;
         this.title = title;
         this.desc = desc;
     }
